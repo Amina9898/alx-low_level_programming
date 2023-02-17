@@ -3,8 +3,8 @@
 #include <stdio.h>
 /**
  * main - function main
- * Description : This program the variable n each 
- * *Return : yes mam
+ * Description: This program the variable n each
+ * Return: function will return numbers
  */
 int main(void)
 {
