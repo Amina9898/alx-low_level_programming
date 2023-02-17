@@ -3,7 +3,8 @@
 #include <stdio.h>
 /**
  * main - function main
- * Description : This program will assign a random number to the variable n each *return
+ * Description : This program the variable n each 
+ * *Return : yes mam
  */
 int main(void)
 {
