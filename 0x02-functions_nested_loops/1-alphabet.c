@@ -2,7 +2,7 @@
 
 /**
  * main - check the code
- * desctiption: great function
+ * desctiption: this function will print the alphabet
  * Return: Always 0.
  */
 
