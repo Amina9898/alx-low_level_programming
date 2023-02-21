@@ -2,7 +2,7 @@
 
 /**
  * main - check the code
- *
+ * desctiption: great function
  * Return: Always 0.
  */
 
