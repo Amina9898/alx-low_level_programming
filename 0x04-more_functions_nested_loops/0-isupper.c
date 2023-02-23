@@ -2,9 +2,9 @@
 
 /**
  * _isupper - will check for uper case
- * description:
+ * description: function che
  * @c: input
- * return: Returns 1 if c is uppercase and 0 otherwise
+ * Return: Returns 1 if c is uppercase and 0 otherwise
  */
 
 int _isupper(int c)
@@ -14,6 +14,5 @@ int _isupper(int c)
 		return (1);
 	}
 	else
-	
 		return (0);
 }
