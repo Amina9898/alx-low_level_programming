@@ -1,9 +1,9 @@
 #include"main.h"
 
 /**
- * Isupper - will check for uper case
+ * _isupper - will check for uper case
  * description:
- * function:
+ * @c: input
  * return: Returns 1 if c is uppercase and 0 otherwise
  */
 
