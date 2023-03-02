@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strncat - function will concatnate 2 strings
+ * _strncat - function will concatnate 2 strings
  * @dest: first string
  * @src: second string
  * @n: number of bytes
@@ -12,7 +12,9 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
-	for (i = 0; dest[i] != '\0'; i++);
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+	}
 
 	for (n = 0; j < n; j++)
 	{
@@ -20,5 +22,5 @@ char *_strncat(char *dest, char *src, int n)
 		if (src[j] == '\0')
 			j = n;
 	}
-	return (dest);	
+	return (dest);
 }
