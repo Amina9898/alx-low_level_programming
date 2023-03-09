@@ -9,6 +9,8 @@ int factorial(int n);
 
 int squareroot(int n, int i);
 
+int is_palindrome(char *s);
+
 int is_prime_number(int n);
 
 int prime_checker(int n, int i);
