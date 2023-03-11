@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		return (0);
 	for (i = 1; i < argc; i++)
 	{
-		if ((only_nums(*argv) == 0))
+		if (!stio(argv[i]))
 		{
 			printf("%s\n", "Error");
 			return (1);
