@@ -8,11 +8,8 @@
  * Return: SUCCESS
  */
 
-int main(int argc, char *argv[])
+int main(int argc, __attribute__((unused))char *argv[])
 {
-	if (argc > 0)
-	{
 		printf("%d\n", argc);
-	}
 	exit(EXIT_SUCCESS);
 }
