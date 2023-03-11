@@ -10,6 +10,10 @@
 
 int main(int argc, __attribute__((unused))char *argv[])
 {
-		printf("%d\n", argc);
+	int i;
+	for (i = 1; i < argc; i++)
+	{
+	}
+	printf("%d\n", i);
 	exit(EXIT_SUCCESS);
 }
