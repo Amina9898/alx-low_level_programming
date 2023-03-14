@@ -7,25 +7,28 @@
  * @str: input
  * Return: dupe
  */
+
 char *_strdup(char *str)
 {
-	int i, end;
-	char *array;
+	char *s;
+
+	unsigned int size = 0, i;
 
 	if (str == NULL)
 		return (NULL);
 
-	for (end = 0; end <= *str; end++)
-	{
-	}
+	while (*(str + size))
+		size++;
 
-	end += 1;
-	array = malloc(sizeof(char) * end);
+	s = malloc(sizeof(char) * (size + 1));
 
-	for (i = 0; i < end; i++)
-		array[i] = str[i];
-
-	if (array == NULL)
+	if (s == NULL)
 		return (NULL);
-	return (array);
+
+	for (i = 0; i < size; i++)
+		*(s + i) = *(str + i);
+
+	*(s + size) = '\0';
+	return (s);
 }
+
