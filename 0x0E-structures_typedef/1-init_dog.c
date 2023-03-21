@@ -3,10 +3,10 @@
 #include "dog.h"
 /**
  * init_dog - function will
- * @d:
- * @name:
- * @age:
- * @owner:
+ * @d: name of struct
+ * @name: name
+ * @age: age
+ * @owner: owner
  * Return: 0
  */
 
