@@ -1,13 +1,11 @@
-#include "3-calc.h"
-#include <stdio.h>
 #include <stdlib.h>
-
+#include <stdio.h>
+#include "3-calc.h"
 /**
- * get_op_dunc - function will select the correct function
- * @s: operator passed
- * Return: pointer to the function
+ * get_op_func - matches operator from main
+ * @s: op str
+ * Return: 0
  */
-
 int (*get_op_func(char *s))(int, int)
 {
 	op_t op_s[] = {
@@ -21,7 +19,7 @@ int (*get_op_func(char *s))(int, int)
 
 	int i = 0;
 
-	 while (op_s[i].op)
+	while (op_s[i].op)
 	{
 		if (*(op_s[i].op) == *s)
 			return (op_s[i].f);
