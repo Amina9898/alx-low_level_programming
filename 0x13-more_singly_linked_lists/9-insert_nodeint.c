@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * insert_nodeint_at_index - dunction inserts node at
@@ -10,7 +11,7 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *p, p2;
+	listint_t *p, *p2;
 	unsigned int count = 0;
 
 	p2 = malloc(sizeof(listint_t));
@@ -21,10 +22,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	p = *head;
 
 	if (!head || !*head || !p)
-		return (NULL)
+		return (NULL);
 	while (p)
 	{
-		if (idx = count)
+		if (idx == count)
 			break;
 		count++;
 		p = p->next;
