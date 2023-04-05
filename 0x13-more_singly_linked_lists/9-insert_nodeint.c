@@ -37,7 +37,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		count++;
 		p = p->next;
 	}
-	if (p == NULL || p2 == NULL)
+	if (p == NULL || p->next == NULL)
 		return (NULL);
 	p2->next = p->next;
 	p->next = p2;
