@@ -18,7 +18,8 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	b = 0;
 	while (cross > 0)
 	{
-		b += (cross);
+		b += (cross & 1);
+		cross >>= 1;
 	}
 	return (b);
 }
