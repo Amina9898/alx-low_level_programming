@@ -5,7 +5,7 @@
 /**
  * make_buff - function allocates 1024 bytes to buffer
  * @f: The name of the file stored in buff
- * Retutn: pointer to buff buffer
+ * Return: pointer to buff buffer
  */
 
 char *make_buff(char *f)
@@ -19,13 +19,14 @@ char *make_buff(char *f)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", f);
 		exit(99);
 	}
-	
+
 	return (buff);
 }
 
 /**
  * close_file - function will close files
  * @fd: the file descriptor
+ * Return: nothing
  */
 
 void close_file(int fd)
@@ -40,7 +41,7 @@ void close_file(int fd)
 		exit(100);
 	}
 }
- 
+
 /**
  * main - program that copies from f1 to f2
  * @argc: number of args
@@ -53,6 +54,7 @@ int main(int argc, char *argv[])
 {
 	int f1, f2, rf, wf;
 	char *buff;
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -64,8 +66,7 @@ int main(int argc, char *argv[])
 	rf = read(f1, buff, 1024);
 	f2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY);
 
-	do
-	{
+	do {
 		if (f1 == -1 || rf == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -83,9 +84,8 @@ int main(int argc, char *argv[])
 
 		rf = read(f1, buff, 1024);
 		f2 = open(argv[2], O_WRONLY | O_APPEND);
-	
 	} while (rf > 0);
-	
+
 	free(buff);
 	close_file(f1);
 	close_file(f2);
