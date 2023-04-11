@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+char *make_buff(char *f);
+void close_file(int fd);
+
 /**
  * make_buff - function allocates 1024 bytes to buffer
  * @f: The name of the file stored in buff
@@ -64,13 +67,13 @@ int main(int argc, char *argv[])
 	buff = make_buff(argv[2]);
 	f1 = open(argv[1], O_RDONLY);
 	rf = read(f1, buff, 1024);
-	f2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY);
+	f2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (f1 == -1 || rf == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(99);
+			exit(98);
 		}
 
 		wf = write(f2, buff, rf);
