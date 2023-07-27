@@ -12,7 +12,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(NAME) *~ \#*\#
+	$(RM) $(NAME) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
