@@ -7,7 +7,7 @@
  * @array: pointer to the array(sorted in ascending order)to serach
  * @size: the size of the array
  * @value: the value to search for
- * 
+ *
  * Return: The index of the value's location if successful,
  * else, returns -1
  */
